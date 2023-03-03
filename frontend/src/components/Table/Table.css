@@ -1,0 +1,30 @@
+#cities-table-wrapper {
+  height: 100%;
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-bottom: 1px solid rgb(0, 78, 102);
+}
+
+td {
+  border-right: 1px solid rgb(0, 78, 102);
+  border-top: 1px solid rgb(0, 78, 102);
+}
+
+td:first-child {
+  border-left: 1px solid rgb(0, 78, 102);
+}
+
+th {
+  border: 1px solid red;
+  background-color: white;
+  height: 40px;
+  font-size: 18px;
+  position: sticky;
+  top: 0;
+}

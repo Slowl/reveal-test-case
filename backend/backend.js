@@ -35,6 +35,13 @@ app.get("/api/cities", async (req, res) => {
   res.json(cities);
 });
 
+app.get("/api/count/cities", async (req, res) => {
+  let cities = citiesJson;
+  const citiesCount = cities.length;
+
+  res.json(citiesCount);
+});
+
 app.get("/api/countries", async (req, res) => {
   if (!countries) {
     countriesCount = {};
