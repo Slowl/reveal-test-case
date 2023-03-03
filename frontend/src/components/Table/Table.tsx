@@ -44,7 +44,7 @@ export const Table = (props: TableProps) => {
 
   //#region RENDERING
   return (
-    <div id="cities-table-wrapper" data-testid="table">
+    <div className={cities.length === 0 ? "cities-table-empty" : ""} id="cities-table-wrapper" data-testid="table">
       <table>
         <thead>
           <tr>

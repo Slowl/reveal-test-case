@@ -5,4 +5,34 @@
   position: sticky;
   bottom: 0;
   background-color:white;
+  padding: 1rem .6rem;
+  border-top: 2px solid #cfcac6;
+}
+
+.pagination-button-container {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.pagination-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cfcac6;
+  border-radius: 50%;
+  gap: .5rem;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.pagination-button:hover {
+  background-color: #0a151b;
+  color: white;
+}
+
+.pagination-button svg {
+  font-size: 1rem;
 }

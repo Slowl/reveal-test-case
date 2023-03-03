@@ -4,27 +4,42 @@
   overflow-y: scroll;
 }
 
+.cities-table-empty {
+  overflow: hidden !important;
+}
+
 table {
   width: 100%;
+  min-height: 100%;
   border-collapse: separate;
   border-spacing: 0px;
-  border-bottom: 1px solid rgb(0, 78, 102);
-}
-
-td {
-  border-right: 1px solid rgb(0, 78, 102);
-  border-top: 1px solid rgb(0, 78, 102);
-}
-
-td:first-child {
-  border-left: 1px solid rgb(0, 78, 102);
+  border-bottom: 1px solid #cfcac6;
 }
 
 th {
-  border: 1px solid red;
-  background-color: white;
+  background-color: #ededed;
   height: 40px;
   font-size: 18px;
   position: sticky;
   top: 0;
+}
+
+td {
+  border-right: 1px solid #cfcac6;
+  border-top: 1px solid #cfcac6;
+  padding: .2rem .5rem;
+}
+
+td:first-child {
+  border-left: 1px solid #cfcac6;
+}
+
+td a {
+  text-decoration: none;
+  color: #7e64ff;
+  font-weight: 500;
+  transition: .2s;
+}
+td a:hover {
+  color: #0a151b;
 }

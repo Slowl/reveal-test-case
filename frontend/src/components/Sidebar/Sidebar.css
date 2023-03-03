@@ -1,6 +1,78 @@
 #sidebar {
-  width: 200px;
-  height: 100%;
+  max-width: 350px;
+  padding: .5rem 1rem;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  gap: .2rem;
   overflow-y: scroll;
+}
+
+#sidebar .button {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #7e64ff;
+  border-radius: 16px;
+  padding: .4rem 1rem;
+  margin: 1rem auto;
+  background-color: #7e64ff;
+  color: white;
+  cursor: pointer;
+  transition: .2s;
+}
+
+#sidebar .button:hover {
+  background-color: #0a151b;
+}
+
+#sidebar .button-disabled {
+  border: 1px solid #e2deda;
+  background-color: #e2deda;
+  color: #0a151b;
+  cursor: default;
+}
+
+#sidebar .button-disabled:hover {
+  border: 1px solid #e2deda;
+  background-color: #e2deda;
+  color: #0a151b;
+}
+
+#sidebar .button svg {
+  padding-left: 1rem;
+}
+
+#sidebar .country {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: .1rem 0;
+  cursor: pointer;
+  transition: .2s;
+}
+
+#sidebar .country:before {
+  display: block;
+  content: '';
+  width: 0px;
+  height: 0px;
+  background-color: #32e7b1;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+#sidebar .country:hover:before {
+  width: 8px;
+  height: 8px;
+}
+
+#sidebar .country-selected:before {
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #32e7b1;
+  border-radius: 50%;
 }

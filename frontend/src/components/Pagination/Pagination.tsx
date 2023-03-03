@@ -1,5 +1,6 @@
 
 import "./Pagination.css";
+import { HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlineChevronDoubleLeft, HiOutlineChevronDoubleRight } from 'react-icons/hi';
 
 //#region TYPES
 type PaginationProps = {
@@ -58,12 +59,18 @@ export const Pagination = (props: PaginationProps) => {
   //#region RENDERING
   return (
     <div id="pagination" data-testid="pagination">
-      <div>
-        <div onClick={() => handleSpecificPagination(0)}>
-          start
+      <div className="pagination-button-container">
+        <div
+          className="pagination-button"
+          onClick={() => handleSpecificPagination(0)}
+        >
+          <HiOutlineChevronDoubleLeft />
         </div>
-        <div onClick={(citiesStartingPointRange === 1) ? undefined : handlePrevPagination}>
-          prev
+        <div
+          className="pagination-button"
+          onClick={(citiesStartingPointRange === 1) ? undefined : handlePrevPagination}
+        >
+          <HiOutlineChevronLeft />
         </div>
       </div>
       <div>
@@ -71,22 +78,24 @@ export const Pagination = (props: PaginationProps) => {
         {' out of '}
         {selectedCountryCitiesCount ? selectedCountryCitiesCount : citiesTotalCount}
       </div>
-      <div>
+      <div className="pagination-button-container">
         <div
+          className="pagination-button"
           onClick={((citiesEndingPointRange === selectedCountryCitiesCount) || (citiesEndingPointRange === citiesTotalCount))
             ? undefined
             : handleNextPagination
           }
         >
-          next
+          <HiOutlineChevronRight />
         </div>
-        <div 
+        <div
+          className="pagination-button"
           onClick={() => ((citiesEndingPointRange === selectedCountryCitiesCount) || (citiesEndingPointRange === citiesTotalCount))
             ? undefined
             : handleSpecificPagination(lastCitiesStartingPointRange)
           }
         >
-          end
+          <HiOutlineChevronDoubleRight />
         </div>
       </div>
     </div>

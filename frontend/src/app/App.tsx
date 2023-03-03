@@ -70,24 +70,24 @@ const App = () => {
   //#endregion
 
   //#region RENDERING
-  if (cities && countries) {
-    return (
-      <div className="App">
-        <Sidebar countries={countries} handleSelectCountry={handleSelectCountry} />
-        <Table
-          cities={cities}
-          citiesTotalCount={citiesTotalCount}
-          handleNextPagination={handleNextPagination}
-          handlePrevPagination={handlePrevPagination}
-          handleSpecificPagination={handleSpecificPagination}
-          queryParams={queryParams}
-          selectedCountry={selectedCountry}
-        />
-      </div>
-    )
-  } else {
-    return null
-  }
+  return (
+    <div className="App">
+      <Sidebar
+        countries={countries ?? []}
+        handleSelectCountry={handleSelectCountry}
+        selectedCountry={selectedCountry}
+      />
+      <Table
+        cities={cities ?? []}
+        citiesTotalCount={citiesTotalCount}
+        handleNextPagination={handleNextPagination}
+        handlePrevPagination={handlePrevPagination}
+        handleSpecificPagination={handleSpecificPagination}
+        queryParams={queryParams}
+        selectedCountry={selectedCountry}
+      />
+    </div>
+  )
   //#endregion
 }
 
